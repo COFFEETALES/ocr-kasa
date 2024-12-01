@@ -1,0 +1,60 @@
+/* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$kasakBkgndColor: white;
+$kasaTextColor: black;
+$kasaMainColor: #FF6060;
+
+:root {
+  --kasakBkgndColor: #{$kasakBkgndColor};
+  --kasaTextColor: #{$kasaTextColor};
+  --kasaMainColor: #{$kasaMainColor};
+}
+
+html {
+  font: 10pt/1 "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--kasakBkgndColor);
+}
+
+html,
+body,
+article,
+div,
+footer,
+h1,
+h2,
+h3,
+header,
+input,
+label,
+li,
+main,
+nav,
+p,
+section,
+span,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+img,
+img:focus {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: bottom;
+}
+
+body {
+  color: var(--kasaTextColor);
+  line-height: 1;
+}
+

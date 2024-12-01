@@ -1,12 +1,12 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
 body {
-  header {
+  > header {
     align-items: stretch;
     box-sizing: border-box;
     display: flex;
     flex-wrap: nowrap;
     height: 90px;
-    padding: 5px 5px;
+    padding: 20px 30px;
 
     h1.kasa-logo:first-of-type {
       //background-color: blue;
@@ -14,6 +14,7 @@ body {
       flex-grow: 1;
       flex-shrink: 0;
       font-size: 0;
+      min-width: 60px;
       text-align: left;
     }
 

@@ -1,6 +1,20 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
 
 body {
+  display: flex;
+  flex-direction: column;
+
+  > header, > footer {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  > main {
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
   .kasa-logo::before {
     content: '';
     display: inline-block;
@@ -8,11 +22,6 @@ body {
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: contain;
-  }
-
-  main {
-  }
-  footer {
   }
 }
 

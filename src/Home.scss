@@ -1,0 +1,30 @@
+main {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  > div.home-gallery {
+    background: #F7F7F7;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      box-sizing: border-box;
+      flex-grow: 0;
+      flex-shrink: 0;
+      position: relative;
+      width: calc(1.0 / 3.0 * 100% - 0px);
+      padding: 30px 30px;
+    }
+
+    > div > div:first-of-type {
+      background-color: var(--kasaMainColor);
+      border-radius: 10px;
+      height: 170px;
+      margin: 0 auto;
+      width: 170px;
+    }
+  }
+}
+

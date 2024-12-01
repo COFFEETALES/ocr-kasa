@@ -1,0 +1,28 @@
+/* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
+body {
+  > footer {
+    align-items: center;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    font-size: 60%;
+
+    > div.kasa-logo:first-of-type {
+      width: 60px;
+      height: 30px;
+      font-size: 0;
+    }
+
+    > div.kasa-logo:first-of-type::before {
+      background-color: #fff;
+      display: block;
+      height: 100%;
+      mask-position: top;
+    }
+
+    > p {
+      color: #fff;
+    }
+  }
+}

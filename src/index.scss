@@ -3,7 +3,7 @@
 
 $kasakBkgndColor: white;
 $kasaTextColor: black;
-$kasaMainColor: #FF6060;
+$kasaMainColor: #ff6060;
 
 :root {
   --kasakBkgndColor: #{$kasakBkgndColor};
@@ -12,7 +12,7 @@ $kasaMainColor: #FF6060;
 }
 
 html {
-  font: 10pt/1 "Montserrat", Arial, Helvetica, sans-serif;
+  font: 24px/1 "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -57,4 +57,3 @@ body {
   color: var(--kasaTextColor);
   line-height: 1;
 }
-

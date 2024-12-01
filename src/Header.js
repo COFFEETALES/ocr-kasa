@@ -1,18 +1,10 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
-import React, { memo } from 'react';
-import { useNavigate } from 'react-router';
+import React from 'react';
+import { NavLink } from 'react-router';
 
 import './Header.scss';
 
 const Header = function () {
-  const navigate = useNavigate();
-
-  const handleClick = (
-    (event) => {
-      navigate(['', event.target.value].join('/'), { replace: true });
-    }
-  );
-
   console.log('Header.js', Math.random());
 
   return (
@@ -22,14 +14,20 @@ const Header = function () {
       </h1>
       <nav>
         <ul>
-          <li onClick={handleClick}>
-            <input type="radio" id="nav-home" name="header-nav" value="home"/>
+          <li>
+            <NavLink
+              className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link-default'}
+              to="/home">Accueil</NavLink>
           </li>
-          <li onClick={handleClick}>
-            <input type="radio" id="nav-contact" name="header-nav" value="contact"/>
+          <li>
+            <NavLink
+              className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link-default'}
+              to="/contact">Contact</NavLink>
           </li>
-          <li onClick={handleClick}>
-            <input type="radio" id="nav-about" name="header-nav" value="about"/>
+          <li>
+            <NavLink
+              className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link-default'}
+              to="/about">À propos</NavLink>
           </li>
         </ul>
       </nav>

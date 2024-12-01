@@ -1,0 +1,15 @@
+/* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
+div.home-gallery {
+  background: #f7f7f7;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  > a {
+    background-color: var(--kasaMainColor);
+    border-radius: 10px;
+    height: 340px;
+    margin: 20px auto;
+    width: 340px;
+  }
+}

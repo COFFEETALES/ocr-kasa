@@ -1,6 +1,26 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
+div#root:first-of-type {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-body {
+  > header, > footer {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  > main {
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  > header, > main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1240px;
+  }
+
   .kasa-logo::before {
     content: '';
     display: inline-block;
@@ -9,10 +29,19 @@ body {
     mask-repeat: no-repeat;
     mask-size: contain;
   }
-
-  main {
-  }
-  footer {
-  }
 }
 
+div#root:first-of-type main {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap: 40px;
+
+    > h2:first-of-type {
+      display: block;
+      background-color: yellow;
+    }
+  }
+}

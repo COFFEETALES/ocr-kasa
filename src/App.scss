@@ -9,6 +9,7 @@ div#root:first-of-type {
     flex-grow: 0;
     flex-shrink: 0;
   }
+
   > main {
     flex-basis: auto;
     flex-grow: 1;
@@ -29,19 +30,50 @@ div#root:first-of-type {
     mask-repeat: no-repeat;
     mask-size: contain;
   }
+
+  main {
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      gap: 40px;
+
+      > h2:first-of-type {
+        background-position: top, top 50% center;
+        background-repeat: no-repeat, no-repeat;
+        background-size: auto, 100%;
+        border-radius: 25px;
+        color: #ffffff;
+        display: block;
+        font-size: 300%;
+        height: 223px;
+        line-height: 223px;
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        > div:first-child {
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1;
+        }
+      }
+    }
+  }
 }
 
-div#root:first-of-type main {
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    gap: 40px;
+div#root:first-of-type {
+  @media (max-width: 768px) {
+    > header, > main {
+      max-width: 335px;
+    }
 
-    > h2:first-of-type {
-      display: block;
-      background-color: yellow;
+    main section {
+      > h2:first-of-type {
+        font-size: 75%;
+        height: 111px;
+        line-height: 111px;
+      }
     }
   }
 }

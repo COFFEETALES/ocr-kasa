@@ -1,21 +1,27 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
 import { NavLink } from 'react-router';
+import { useContext } from 'react';
+
+import { ApiService } from './ApiService';
 
 import './Home.scss';
 
-import logements from './logements.json';
-
 export default function Home() {
+  const locations = useContext(ApiService);
+
   return (
-    <section>
+    <section id="home-gallery">
       <h2>
-        TEST
+        <div>Chez vous, partout et ailleurs</div>
       </h2>
-      <div className="home-gallery">
+      <div>
         {
-          logements.map(
+          locations.map(
             (logement) => (
-              <NavLink key={logement.id} to={`/location/${logement.id}`}>{ logement.title }</NavLink>
+              <NavLink
+                key={logement.id}
+                to={`/location/${logement.id}`}
+              ><img alt="" src={ logement.cover }/><div>{ logement.title }</div></NavLink>
             )
           )
         }

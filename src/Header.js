@@ -17,17 +17,17 @@ const Header = function () {
           <li>
             <NavLink
               className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link-default'}
-              to="/home">Accueil</NavLink>
+              to="/home">accueil</NavLink>
           </li>
           <li>
             <NavLink
               className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link-default'}
-              to="/contact">Contact</NavLink>
+              to="/contact">contact</NavLink>
           </li>
           <li>
             <NavLink
               className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link-default'}
-              to="/about">À propos</NavLink>
+              to="/about">à&nbsp;propos</NavLink>
           </li>
         </ul>
       </nav>

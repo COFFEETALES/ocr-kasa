@@ -22,11 +22,6 @@ const Header = function () {
           <li>
             <NavLink
               className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link-default'}
-              to="/contact">contact</NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link-default'}
               to="/about">à&nbsp;propos</NavLink>
           </li>
         </ul>

@@ -4,4 +4,12 @@ section#about {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('/forest_and_mountains.med.webp');
     font-size: 0 ! important;
   }
+
+  div.collapse-component:not(last-of-type) {
+    margin: 0 auto 30px auto;
+  }
+
+  div.collapse-component {
+    width: 82.5%;
+  }
 }

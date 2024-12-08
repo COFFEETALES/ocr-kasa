@@ -7,7 +7,7 @@ import { ApiService } from './ApiService';
 import './Home.scss';
 
 export default function Home() {
-  const locations = useContext(ApiService);
+  const { locations } = useContext(ApiService);
 
   return (
     <section id="home-gallery">

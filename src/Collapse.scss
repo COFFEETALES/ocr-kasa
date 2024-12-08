@@ -38,11 +38,15 @@ div.collapse-component {
 		> div:first-of-type {
 			height: 0;
 		}
+
 		> div:last-of-type {
 			overflow: hidden;
 
 			> div:first-of-type {
+				background-color: #fbfbfb;
+				line-height: 1.5;
 				padding: 20px;
+				white-space: pre-wrap;
 			}
 		}
 	}
@@ -53,6 +57,7 @@ div.collapse-component.collapse-expanded {
 			transform: rotate(-180deg);
 		}
 	}
+
 	> div:last-of-type {
 		grid-template-rows: min-content 1fr;
 	}

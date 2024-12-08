@@ -2,8 +2,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
 
 import About from './About';
-import Home from './Home';
 import ApiService from './ApiService';
+import Home from './Home';
+import Location from './Location';
 import NotFound from './NotFound';
 import Page2 from './Page2';
 import RouteLayout from './RouteLayout';
@@ -18,7 +19,7 @@ export default function App() {
           <Route path="/" element={<RouteLayout/>}>
             <Route path="/" element={<ApiService/>}>
               <Route path="home" element={<Home/>}/>
-              <Route path="location" element={<Home/>}/>
+              <Route path="location/:locationId" element={<Location/>}/>
             </Route>
             <Route path="contact" element={<Page2/>}/>
             <Route path="about" element={<About/>}/>

@@ -32,7 +32,7 @@ div#root:first-of-type {
   }
 
   main {
-    section {
+    section:not(.plain) {
       display: flex;
       flex-direction: column;
       justify-content: center;

@@ -1,0 +1,61 @@
+/* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
+div.slideshow {
+  background-color: #fbfbfb;
+  border-radius: 25px;
+  height: 415px;
+  overflow: hidden;
+  position: relative;
+
+  > img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: absolute;
+    width: 100%;
+  }
+  > img.slideshow-prev {
+    left: -100%;
+    transition: left 1.5s;
+  }
+  > img.slideshow-active {
+    left: 0%;
+    transition: left 1.5s;
+  }
+  > img.slideshow-next {
+    left: 100%;
+    transition: left 1.5s;
+  }
+  > button {
+    appearance: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 1px);
+    height: 120px;
+    position: absolute;
+    top: calc(50% - 48px);
+    width: 96px;
+    z-index: 100;
+  }
+  > button:first-of-type {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgOTYgMTIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMzk3MzEyXzk2KSI+CjxwYXRoIGQ9Ik03MC4wNCAxNS43ODMxTDYyLjkyIDguNzAzMTJMMjMuMzYgNDguMzAzMUw2Mi45NiA4Ny45MDMxTDcwLjA0IDgwLjgyMzFMMzcuNTIgNDguMzAzMUw3MC4wNCAxNS43ODMxWiIgZmlsbD0id2hpdGUiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8zOTczMTJfOTYiPgo8cmVjdCB3aWR0aD0iOTYiIGhlaWdodD0iMTE5LjY0IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwLjMwMzIyMykiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K');
+  }
+  > button:last-of-type {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iMTIxIiB2aWV3Qm94PSIwIDAgOTYgMTIxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMzk3MzEyXzEwMCkiPgo8cGF0aCBkPSJNMjUuOTYgODEuMzQ1OEwzMy4wNCA4OC40MjU4TDcyLjY0IDQ4LjgyNThMMzMuMDQgOS4yMjU4M0wyNS45NiAxNi4zMDU4TDU4LjQ4IDQ4LjgyNThMMjUuOTYgODEuMzQ1OFoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMzk3MzEyXzEwMCI+CjxyZWN0IHdpZHRoPSI5NiIgaGVpZ2h0PSIxMTkuNjQiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDAuODI1OTI4KSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=');
+    right: 0;
+  }
+  > div:last-of-type {
+    bottom: 0;
+    color: #fff;
+    filter: drop-shadow(1px 1px black);
+    font-size: 112.5%;
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+  }
+}

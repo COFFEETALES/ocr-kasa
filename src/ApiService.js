@@ -19,8 +19,14 @@ export default function Apiservice() {
     }, []
   );
 
+  const getLocationById = (
+    (locationId) => (
+      locations.length ? locations.find(location => location.id === locationId) || null : void 0
+    )
+  );
+
   return (
-    <ApiService.Provider value={locations}>
+    <ApiService.Provider value={{locations, getLocationById}}>
       <Outlet/>
     </ApiService.Provider>
   );

@@ -1,0 +1,116 @@
+/* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
+section#selected-location {
+  .slideshow {
+    margin: 0 0 20px 0;
+  }
+
+  > div#selected-location-top-area {
+    display: flex;
+
+    > div:first-of-type {
+      flex-grow: 1;
+
+      h2 {
+        color: var(--kasaMainColor);
+        font-size: 225%;
+        height: 32px;
+        padding: 14px 0 0 0;
+
+        + p:first-of-type {
+          font-size: 112.5%;
+          line-height: 2.0;
+          height: 18px;
+        }
+      }
+
+      > div#selected-location-tags {
+        padding: 20px 0 0 0;
+
+        > div {
+          background-color: var(--kasaMainColor);
+          border-radius: 10px;
+          color: white;
+          display: inline-block;
+          font-size: 87.5%;
+          padding: 5px 10px;
+        }
+
+        > div:not(:first-of-type) {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    > div:last-of-type {
+      > div#selected-location-host {
+        height: 64px;
+        line-height: 64px;
+
+        > span:first-of-type {
+          color: var(--kasaMainColor);
+          font-size: 112.5%;
+          vertical-align: middle;
+        }
+
+        > img:first-of-type {
+          background-color: #c4c4c4;
+          border-radius: 50%;
+          height: 64px;
+          margin-left: 10px;
+          object-fit: cover;
+          vertical-align: middle;
+          width: 64px;
+        }
+      }
+
+      > div#selected-location-rating {
+        padding: 10px 0 0 0;
+        text-align: right;
+      }
+    }
+  }
+
+  > div:last-of-type {
+    display: flex;
+    padding: 20px 0 0 0;
+    gap: 20px;
+
+    > .collapse-component {
+      flex-basis: 0;
+      flex-grow: 1;
+      flex-shrink: 1;
+      overflow-x: hidden;
+
+      > button:first-of-type {
+        font-size: 112.5%;
+      }
+    }
+  }
+
+  .selected-location-star-inactive,
+  .selected-location-star-active {
+    display: inline-block;
+    font-size: 0;
+    height: 36px;
+    width: 36px;
+  }
+
+  .selected-location-star-inactive::before,
+  .selected-location-star-active::before {
+    content: '';
+    display: block;
+    height: 100%;
+    mask-image: url('/rating-star.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+
+  .selected-location-star-inactive::before {
+    background-color: #e3e3e3;
+  }
+
+  .selected-location-star-active::before {
+    background-color: var(--kasaMainColor);
+  }
+}

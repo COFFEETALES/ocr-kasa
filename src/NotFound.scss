@@ -1,1 +1,27 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
+section#not-found {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  height: 100%;
+  justify-content: center;
+
+  h2 {
+    color: var(--kasaMainColor);
+    font-size: 1800%;
+  }
+
+  p {
+    color: var(--kasaMainColor);
+    font-size: 225%;
+  }
+
+  a, a:visited, a:link {
+    color: black;
+    font-size: 150%;
+    text-decoration: underline;
+  }
+}
+
+

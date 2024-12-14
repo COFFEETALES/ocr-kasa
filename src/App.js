@@ -1,5 +1,5 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { BrowserRouter, Navigate, Routes, Route } from 'react-router';
 
 import About from './About';
 import ApiService from './ApiService';
@@ -17,6 +17,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<RouteLayout/>}>
+            <Route path="/" element={<Navigate to="home" replace />}/>
             <Route path="/" element={<ApiService/>}>
               <Route path="home" element={<Home/>}/>
               <Route path="location/:locationId" element={<Location/>}/>

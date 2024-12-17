@@ -1,5 +1,7 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
 section#selected-location {
+  padding: 40px 0;
+
   .slideshow {
     margin: 0 0 20px 0;
   }
@@ -24,7 +26,7 @@ section#selected-location {
       }
 
       > div#selected-location-tags {
-        padding: 20px 0 0 0;
+        padding: 22px 0 0 0;
 
         > div {
           background-color: var(--kasaMainColor);

@@ -3,13 +3,21 @@ section#not-found {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 150px;
   height: 100%;
-  justify-content: center;
+  justify-content: space-around;
+
+  > * {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
 
   h2 {
     color: var(--kasaMainColor);
     font-size: 1800%;
+    height: 210px;
+    line-height: 210px;
+    overflow: hidden;
   }
 
   p {
@@ -17,11 +25,31 @@ section#not-found {
     font-size: 225%;
   }
 
+  a {
+    font-size: 150%;
+  }
+
   a, a:visited, a:link {
     color: black;
-    font-size: 150%;
     text-decoration: underline;
   }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 600%;
+      height: 70px;
+      line-height: 70px;
+    }
+
+    p {
+      font-size: 112.5%;
+    }
+
+    a {
+      font-size: 87.5%;
+    }
+  }
+  /**/
 }
 
 

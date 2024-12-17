@@ -1,15 +1,38 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
 section#about {
+  height: 100%;
+
   > h2:first-of-type {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('/forest_and_mountains.med.webp');
     font-size: 0 ! important;
   }
 
-  div.collapse-component:not(last-of-type) {
-    margin: 0 auto 30px auto;
+  > div:last-of-type {
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: flex-start;
+
+    div.collapse-component:not(last-of-type) {
+      margin: 30px auto 0 auto;
+    }
+
+    div.collapse-component:last-of-type {
+      margin: 30px auto 30px auto;
+    }
+
+    div.collapse-component {
+      width: 82.5%;
+    }
   }
 
-  div.collapse-component {
-    width: 82.5%;
+  @media (max-width: 768px) {
+    > div:last-of-type {
+      div.collapse-component {
+        width: 100%;
+      }
+    }
   }
 }

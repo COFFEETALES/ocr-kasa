@@ -11,15 +11,19 @@ section#home-gallery {
     border-radius: 25px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin: 30px 0 0 0;
+    overflow: hidden;
+    padding: 0 0 40px 0;
 
     > a {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%), var(--kasaMainColor);
       border-radius: 10px;
       height: 340px;
-      margin: 20px auto;
+      margin: 40px auto 0 auto;
+      max-width: 340px;
       overflow: hidden;
       position: relative;
-      width: 340px;
+      width: 100%;
 
       > img {
         height: 100%;
@@ -42,4 +46,28 @@ section#home-gallery {
       }
     }
   }
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+
+    > div:last-of-type {
+      background: transparent;
+      border-radius: 0;
+      grid-template-columns: 1fr;
+      margin: 0;
+      padding: 0;
+
+      > a {
+        border-radius: 10px;
+        height: 255px;
+        width: 335px;
+        margin: 20px auto 0 auto;
+
+        > div {
+          font-size: 100%;
+        }
+      }
+    }
+  }
+  /**/
 }

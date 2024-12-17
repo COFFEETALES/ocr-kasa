@@ -25,9 +25,11 @@ export default function Slideshow({ images }) {
               }
               style={
                 {
-                  zIndex: index === current.value ? 99 : (
-                    current.direction === +1 && index === prev ? 99 : (
-                      current.direction === -1 && index === next ? 99 : 0
+                  zIndex: (
+                    index === current.value ? 99 : (
+                      current.direction === +1 && index === prev ? 99 : (
+                        current.direction === -1 && index === next ? 99 : 0
+                      )
                     )
                   )
                 }

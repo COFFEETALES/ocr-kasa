@@ -2,9 +2,9 @@
 import { useNavigate, useParams } from 'react-router';
 import { useContext, useEffect, useState } from 'react';
 
-import Collapse from './Collapse';
-import Slideshow from './Slideshow';
-import { ApiService } from './ApiService';
+import Collapse from '../features/Collapse';
+import Slideshow from '../features/Slideshow';
+import { ApiService } from '../services/ApiService';
 
 import './Location.scss';
 

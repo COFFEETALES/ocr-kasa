@@ -1,13 +1,13 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router';
 
-import About from './About';
-import ApiService from './ApiService';
-import Home from './Home';
-import Location from './Location';
-import NotFound from './NotFound';
-import Page2 from './Page2';
-import RouteLayout from './RouteLayout';
+import About from '../pages/About';
+import ApiService from '../services/ApiService';
+import Home from '../pages/Home';
+import Location from '../pages/Location';
+import NotFound from '../core/NotFound';
+import Page2 from '../pages/Page2';
+import RouteLayout from '../core/RouteLayout';
 
 import './App.scss';
 

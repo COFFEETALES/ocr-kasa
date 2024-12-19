@@ -1,7 +1,7 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
 import './About.scss';
 
-import Collapse from './Collapse';
+import Collapse from '../features/Collapse';
 
 export default function About() {
   return (

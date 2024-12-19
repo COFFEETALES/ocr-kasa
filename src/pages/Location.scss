@@ -206,6 +206,10 @@ section#selected-location {
         flex-basis: auto;
         flex-grow: 0;
         flex-shrink: 1;
+
+        > button:first-of-type {
+          font-size: 70%;
+        }
       }
     }
 

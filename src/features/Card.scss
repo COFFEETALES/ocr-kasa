@@ -1,0 +1,44 @@
+/* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
+a.card-component {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%), var(--kasaMainColor);
+  border-radius: 10px;
+  height: 340px;
+  margin: 40px auto 0 auto;
+  max-width: 340px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  > img {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+  }
+
+  > div {
+    bottom: 15px;
+    color: #fff;
+    font-size: 112.5%;
+    font-weight: bold;
+    height: 40px;
+    left: 20px;
+    line-height: 1.4;
+    position: absolute;
+    text-shadow: black 1px 1px 2px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  a.card-component {
+    border-radius: 10px;
+    height: 255px;
+    width: 335px;
+    margin: 20px auto 0 auto;
+
+    > div {
+      font-size: 100%;
+    }
+  }
+}

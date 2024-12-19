@@ -2,6 +2,7 @@
 import { NavLink } from 'react-router';
 import { useContext } from 'react';
 
+import Card from '../features/Card'; 
 import { ApiService } from '../services/ApiService';
 
 import './Home.scss';
@@ -18,10 +19,12 @@ export default function Home() {
         {
           locations.map(
             (logement) => (
-              <NavLink
-                key={logement.id}
-                to={`/location/${logement.id}`}
-              ><img alt="" src={ logement.cover }/><div>{ logement.title }</div></NavLink>
+              <Card 
+                key={ logement.id }
+                id={ logement.id }
+                cover={ logement.cover }
+                title={ logement.title }
+              />
             )
           )
         }

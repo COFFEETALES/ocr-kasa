@@ -33,10 +33,11 @@ div.slideshow {
     appearance: none;
     background-color: transparent;
     background-repeat: no-repeat;
+    background-size: cover;
     border: 0;
     cursor: pointer;
     filter: drop-shadow(1px 1px 1px);
-    height: 120px;
+    height: 96px;
     position: absolute;
     top: calc(50% - 48px);
     width: 96px;
@@ -65,4 +66,16 @@ div.slideshow {
     width: 100%;
     z-index: 100;
   }
+
+  @media (max-width: 768px) {
+    height: 255px;
+    border-radius: 10px;
+
+    > button {
+      height: 36px;
+      top: calc(50% - 18px);
+      width: 36px;
+    }
+  }
+  /**/
 }

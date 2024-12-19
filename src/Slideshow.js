@@ -5,6 +5,7 @@ import './Slideshow.scss';
 
 export default function Slideshow({ images }) {
   const [current, setCurrent] = useState({value: 0, direction: 0});
+  const [isPaused, setIsPaused] = useState(true);
 
   const prev = (images.length + current.value - 1) % images.length;
   const next = (images.length + current.value + 1) % images.length;
@@ -36,6 +37,13 @@ export default function Slideshow({ images }) {
               }
               key={src}
               src={src}
+              onTransitionEnd={
+                index === current.value ? (
+                  e => {
+                    setIsPaused(true);
+                  }
+                ) : null
+              }
             />
           )
         )
@@ -43,8 +51,24 @@ export default function Slideshow({ images }) {
       {
         images.length > 1 && (
           <>
-            <button onClick={() => setCurrent({value: prev, direction: -1})}></button>
-            <button onClick={() => setCurrent({value: next, direction: +1})}></button>
+            <button
+              onClick={
+                () => {
+                  if (!isPaused) { return; }
+                  setIsPaused(false);
+                  setCurrent({value: prev, direction: -1});
+                }
+              }
+            ></button>
+            <button
+              onClick={
+                () => {
+                  if (!isPaused) { return; }
+                  setIsPaused(false);
+                  setCurrent({value: next, direction: +1});
+                }
+              }
+            ></button>
             <div>
               {current.value + 1} / {images.length}
             </div>

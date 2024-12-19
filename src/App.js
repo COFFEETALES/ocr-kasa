@@ -18,7 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<RouteLayout/>}>
             <Route path="/" element={<Navigate to="home" replace />}/>
-            <Route path="/" element={<ApiService/>}>
+            <Route element={<ApiService/>}>
               <Route path="home" element={<Home/>}/>
               <Route path="location/:locationId" element={<Location/>}/>
             </Route>

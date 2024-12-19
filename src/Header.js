@@ -5,8 +5,6 @@ import { NavLink } from 'react-router';
 import './Header.scss';
 
 const Header = function () {
-  console.log('Header.js', Math.random());
-
   return (
     <header>
       <h1 className="kasa-logo">

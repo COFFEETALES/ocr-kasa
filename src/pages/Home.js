@@ -1,5 +1,4 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
-import { NavLink } from 'react-router';
 import { useContext } from 'react';
 
 import Card from '../features/Card'; 

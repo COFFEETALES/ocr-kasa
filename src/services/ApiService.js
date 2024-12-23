@@ -26,7 +26,7 @@ export default function Apiservice() {
   );
 
   return (
-    <ApiService.Provider value={{locations, getLocationById}}>
+    <ApiService.Provider value={ {locations, getLocationById} }>
       <Outlet/>
     </ApiService.Provider>
   );

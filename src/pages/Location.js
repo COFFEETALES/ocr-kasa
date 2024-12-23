@@ -30,19 +30,21 @@ export default function Location(a) {
 
   return (
     <section className="plain" id="selected-location">
-      <Slideshow images={location.pictures}/>
+      <Slideshow images={ location.pictures }/>
       <div id="selected-location-top-area">
         <div>
-          <h2>
-            {
-              location.title
-            }
-          </h2>
-          <p>
-            {
-              location.location
-            }
-          </p>
+          <div>
+            <h2>
+              {
+                location.title
+              }
+            </h2>
+            <p>
+              {
+                location.location
+              }
+            </p>
+          </div>
           <div id="selected-location-tags">
             {
               location.tags.map(
@@ -59,12 +61,14 @@ export default function Location(a) {
         </div>
         <div>
           <div id="selected-location-host">
-            <span>
-              {
-                location.host.name
-              }
-            </span>
-            <img alt="" src={location.host.picture}/>
+            <div>
+              <span>
+                {
+                  location.host.name
+                }
+              </span>
+              <img alt="" src={ location.host.picture }/>
+            </div>
           </div>
           <div id="selected-location-rating">
             {

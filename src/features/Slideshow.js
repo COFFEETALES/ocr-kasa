@@ -4,8 +4,7 @@ import { useState } from 'react';
 import './Slideshow.scss';
 
 export default function Slideshow({ images }) {
-  const [current, setCurrent] = useState({value: 0, direction: 0});
-  const [isPaused, setIsPaused] = useState(true);
+  const [current, setCurrent] = useState({isPaused: true, value: 0, direction: 0});
 
   const prev = (images.length + current.value - 1) % images.length;
   const next = (images.length + current.value + 1) % images.length;
@@ -35,12 +34,12 @@ export default function Slideshow({ images }) {
                   )
                 }
               }
-              key={src}
-              src={src}
+              key={ src }
+              src={ src }
               onTransitionEnd={
                 index === current.value ? (
                   e => {
-                    setIsPaused(true);
+                    setCurrent({isPaused: true, value: index, direction: 0});
                   }
                 ) : null
               }
@@ -54,23 +53,21 @@ export default function Slideshow({ images }) {
             <button
               onClick={
                 () => {
-                  if (!isPaused) { return; }
-                  setIsPaused(false);
-                  setCurrent({value: prev, direction: -1});
+                  if (!current.isPaused) { return; }
+                  setCurrent({isPaused: false, value: prev, direction: -1});
                 }
               }
             ></button>
             <button
               onClick={
                 () => {
-                  if (!isPaused) { return; }
-                  setIsPaused(false);
-                  setCurrent({value: next, direction: +1});
+                  if (!current.isPaused) { return; }
+                  setCurrent({isPaused: false, value: next, direction: +1});
                 }
               }
             ></button>
             <div>
-              {current.value + 1} / {images.length}
+              { current.value + 1 } / { images.length }
             </div>
           </>
         )

@@ -13,15 +13,15 @@ export default function Collapse({label, description, children}) {
   );
 
   return (
-    <div className={containerClass}>
-      <button onClick={toggle}>
-        <div>{label}</div>
+    <div className={ containerClass }>
+      <button onClick={ toggle }>
+        <div>{ label }</div>
         <div></div>
       </button>
       <div>
         <div></div>
         <div>
-          <div>{children || description}</div>
+          <div>{ children || description }</div>
         </div>
       </div>
     </div>

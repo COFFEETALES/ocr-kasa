@@ -15,14 +15,14 @@ export default function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<RouteLayout/>}>
-            <Route path="/" element={<Navigate to="home" replace />}/>
-            <Route element={<ApiService/>}>
-              <Route path="home" element={<Home/>}/>
-              <Route path="location/:locationId" element={<Location/>}/>
+          <Route path="/" element={ <RouteLayout/> }>
+            <Route path="/" element={ <Navigate to="home" replace/> }/>
+            <Route element={ <ApiService/> }>
+              <Route path="home" element={ <Home/> }/>
+              <Route path="location/:locationId" element={ <Location/> }/>
             </Route>
-            <Route path="about" element={<About/>}/>
-            <Route path="*" element={<NotFound/>}/>
+            <Route path="about" element={ <About/> }/>
+            <Route path="*" element={ <NotFound/> }/>
           </Route>
         </Routes>
       </BrowserRouter>
